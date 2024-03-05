@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<style>
+ .signup-container{
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow:0 0 10px;
+    }
+    .signup-container h2{
+        text-align: center
+    }
+    .signup-form{
+        display:flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .signup-form input{
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .signup-form button{
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .login-link{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .login-link a{
+        color: #007bff;
+        text-decoration: none;
+    }
+    .body{
+        background: radial-gradient(#fff,#112521);
+    }
+
+</style>
+
+<body class="body">
+<div class="signup-container">
+<h2>Login</h2>
+<form class="signup-form" action="#" method="POST">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username"  name="username" required>
+
+
+    <label for="password">Password:</label>
+    <input type="password"  name="password" id="password" required>
+
+    <button type="submit">Login</button>
+
+
+</form>
+</div>
+
+</body>
+</html>
